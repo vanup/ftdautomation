@@ -39,6 +39,8 @@ public class FortudeAutomation {
       String text = search_button.getAttribute("value");
 
       Assert.assertEquals(text, search_text, "Text not found!");
+	  
+	System.out.println("======Test Executed======");
   }
 
 }

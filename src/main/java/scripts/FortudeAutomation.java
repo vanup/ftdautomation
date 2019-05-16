@@ -23,6 +23,7 @@ public class FortudeAutomation {
 	  System.out.println(classLoader.getResource("chromedriver.exe").getPath());
 	  System.setProperty("webdriver.chrome.driver",classLoader.getResource("chromedriver.exe").getPath().toString());
 	  driver = new ChromeDriver();
+      	  System.out.print("======= Driver Started ============");
   }
 
   @AfterClass
@@ -30,12 +31,14 @@ public class FortudeAutomation {
 	  driver.quit();
   }
   @Test
-  public void testOpen() {
+  public void testOpen() throws InterruptedException{
 
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+      Thread.sleep(3000);
       driver.get("http://www.google.com");
 
+      Thread.sleep(3000);
       String search_text = "Google Search";
       WebElement search_button = driver.findElement(By.name("btnK"));
 

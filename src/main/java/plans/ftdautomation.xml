@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
   <test name="FortudeAutomation">
     <classes>
-      <class name="scripts.FortudeAutomation"/>
+      <class name="ftd.scripts.FortudeAutomation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
